@@ -2,8 +2,8 @@ import pygame
 from dino_runner.utils.constants import SCREEN_WIDTH
 
 class PowerUp:
-    Y_POS_POWER_UP = 125
-    POWER_UP_DURATION = 500
+    Y_POS_POWER_UP = 200
+    POWER_UP_DURATION = 5000
 
     def __init__(self, image, type):
         self.image = image
@@ -21,6 +21,7 @@ class PowerUp:
             self.start_time = pygame.time.get_ticks()
             self.time_up = self.start_time + self.POWER_UP_DURATION
             self.used = True
+            
 
     def draw(self, screen):
         screen.blit(self.image, self.rect)
